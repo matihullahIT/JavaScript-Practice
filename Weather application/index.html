@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./index.js"></script>
-    <title>weather application</title>
-    <style type="text/tailwindcss">
-    
-    </style>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Weather Application</title>
   </head>
-  <body class="flex flex-col items-center justify-center">
-      <!-- npx @tailwindcss/cli -i ./input.css -o ./output.css --watch -->
-    <div>
-      <input type="text" id="location" placeholder="Enter location" class="border-2 border-gray-300 p-2 rounded-md" />
-      
-      <button id="getweather" onclick="getWeather()">Get weather</button>
-      <p id="result" class="hidden flex flex-col item-center justify-center text-center mt-4 bg-blue-500 text-white p-3 border border-blue-400 rounded-lg">
+  <body class="flex flex-col items-center justify-center ">
+    <div class="card bg-gray-200 mt-8 p-4 rounded-lg shadow-lg w-[22rem] h-[20rem]">
+      <div class="flex justify-between">
+        <input type="text" id="location" placeholder="London" class="border-2 border-gray-300 p-2 text-center rounded-md" />
+        <button id="getweather" class="items-center bg-blue-500
+      rounded-xl text-white p-2
+      transition-all hover:bg-blue-700 " onclick="getWeather()">Get weather</button>
+    </div>
+    <div id="result-container" class="hidden mt-3">
+      <p id="result" class="flex flex-col item-center justify-center text-center bg-blue-500 text-white p-3 border border-blue-400 rounded-lg">
       </p>
+    </div>
     </div>
   </body>
 </html>

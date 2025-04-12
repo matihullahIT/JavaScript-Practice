@@ -1,1 +1,1 @@
-![Demo](./weatherapplicatoin.gif)
+![Banner](./weatherapplicatoin.gif)

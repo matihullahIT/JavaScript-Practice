@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./index.js"></script>
+    <title>Calcualator</title>
+    <style type="text/tailwindcss">
+    
+    </style>
+  </head>
+  <body class="flex flex-col items-center justify-center">
+    <h1 class="text-3xl font-bold text-clifford flex item-center justify-center">
+      Calculator application
+    </h1>
+    <div class="bg-blue-700 border border-black rounded-xl p-3 mt-[4rem] ">
+      <div class="bg-grey-400">
+        <div class="p-4">
+            <input type="text" id="output" class="border-2 bg-blue-100 border-gray-300 rounded-md p-2" />
+    </div>
+    <!-- npx @tailwindcss/cli -i ./input.css -o ./output.css --watch -->
+    <div class="grid grid-cols-4">
+      <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('7')">7</button>
+      <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500"onclick="input('8')">8</button>
+      <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('9')">9</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('+')">+</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('4')">4</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('5')">5</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('6')">6</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('-')">-</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('1')">1</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('2')">2</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('3')">3</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('*')">*</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="input('0')" >0</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500"onclick="input('/')">/</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="calcualte()">=</button>
+        <button id="input" class="border m-1 border-blue-300 rounded-xl bg-blue-400 py-3 transition-all hover:bg-blue-500" onclick="Clear()">C</button>
+        
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

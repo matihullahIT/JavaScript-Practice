@@ -1,0 +1,20 @@
+@keyframes dropdown {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+#result-container {
+    animation: dropdown 0.7s ease-in;
+    position: relative;
+    display: none;
+}
+
+#result-container.show {
+    display: block; /* Show when the class is added */
+}

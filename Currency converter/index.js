@@ -1,4 +1,4 @@
-const apikey = "YOUR API KEY";
+const apikey = "211397f6198d679cf890fc57";
 
 const GetExchangeRates = () => {
     const fromselect = document.getElementById("from");

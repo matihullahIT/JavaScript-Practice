@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./signup.js"></script>
+    <title>Sign up</title>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+  <body class="bg-clifford">
+    <div class="flex flex-col items-center text-center capitalize ">
+      <h1 class="text-4xl font-bold text-white">Signup Form</h1>
+      <form id="signup_form">
+        <div class="flex flex-col mt-4 bg-gray-200 px-10 py-3 rounded-xl">
+          <label for="name">name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="namerr"class="text-red-600"></span>
+          <label for="username">username</label>
+          <input type="text" id="username" name="username" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="usrnamerr"class="text-red-600"></span>
+          <label for="email">email</label>
+          <input type="text" id="email" name="email" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="emlerr"class="text-red-600"></span>
+          <label for="password">password</label>
+          <input type="password" id="password" name="password" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="pswderr"class="animate animate-pulse text-red-600"></span>
+          <label for="retype">retype</label>
+          <input type="password" id="repassword" name="repassword" class="border  bg-white border-gray-300 rounded p-2" required />
+          <span id="repswderr"class="animate animate-pulse text-red-600"></span>
+          <div class="flex justify-between py-3 items-center text-center">
+            <label for="showpass">show</label>
+            <input type="checkbox" id="showpass" value="show" />
+          </div>
+          <div class="flex justify-between ">
+            <button id="cancle" class="bg-gray-100 px-2 py-3 rounded-xl transition-all hover:bg-gray-400 hover:text-white">Cancle</button>
+            <input type="submit" value="Submit" class="bg-blue-500 px-2 py-3 rounded-xl  transition-all hover:bg-blue-700 hover:text-white">
+          </div>
+          </div>
+      </form>
+    </div>
+    <div id="results">
+    </div>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-clifford: #da373d;
+        --color-clifford: #da37 3d;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -19,15 +19,54 @@
         <a href="#" class="transition-all hover:underline-offset-0 nav-elements">Home</a>
         <div id="nav-item-container" class="relative">
           <a href="#" class="nav-elements">Category</a>
-          <div class="details absolute flex flex-col text-gray-600 bg-gray-300 rounded-md underline-offset-8 gap-y-5 gap-x-3 text-left p-3 hidden">
-            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:border-b-1 ">Lorem</h2>
-            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:border-b-1">Lorem</h2>
-            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:border-b-1">Lorem</h2>
-            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:border-b-1">Lorem</h2>
+          <div class="details absolute flex flex-col bg-red-100 bg-gray-300 rounded-md underline-offset-8 gap-y-5 gap-x-3 text-left px-4 py-5 hidden">
+            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl ">Lorem</h2>
+            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl ">Lorem</h2>
+            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl ">Lorem</h2>
           </div>
         </div>
         <a href="#" class="nav-elements">Login</a>
       </nav>
+    </div>
+    <div id="banner" class="flex w-full h-[28rem] justify-between items-center bg-cover bg-center" style="
+    background-size: cover;background-position: center;
+    transition: all 0.5s ease-in-out;">
+      <button class="text-4xl px-4 bg-white opacity-25 transition-all hover:opacity-50 rounded-md" id="prev">
+        &lt;
+      </button>
+      <div id="dotsconteiner" class="bg-gray-300 border-4 border-white flex text-center absolute bottom-9.4">
+      </div>
+      <button id="next" class="text-4xl px-4 bg-white opacity-25 transition-all hover:opacity-50 rounded-md">
+        &gt;
+      </button>
+    </div>
+    <!-- adding faqs section -->
+    <div class="my-3 bg-white rounded-md shadow-lg w-full max-w-xl p-4 space-y-2">
+    
+      <!-- FAQ Item 1 -->
+      <h2  class="label font-bold cursor-pointer text-lg bg-red-300 p-3 rounded">
+        What is jQuery?
+      </h2>
+      <div class="answer text-gray-700 text-left p-3 hidden">
+        jQuery is a fast, small, and feature-rich JavaScript library that simplifies HTML DOM manipulation and event handling.
+      </div>
+  
+      <!-- FAQ Item 2 -->
+      <h2 class="label font-bold cursor-pointer text-lg bg-red-300 p-3 rounded">
+        Why use an accordion?
+      </h2>
+      <div class="answer text-gray-700 text-left p-3 hidden">
+        Accordions help organize content in a collapsible format, saving space and improving UX.
+      </div>
+  
+      <!-- FAQ Item 3 -->
+      <h2 class="label font-bold cursor-pointer text-lg bg-red-300 p-3 rounded">
+        Can I style jQuery elements?
+      </h2>
+      <div class="answer text-gray-700 text-left p-3 hidden">
+        Yes! jQuery allows you to manipulate styles, add/remove classes, and handle animations easily.
+      </div>
+  
     </div>
   </body>
 </html>

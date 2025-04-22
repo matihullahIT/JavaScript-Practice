@@ -4,69 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da37 3d;
-      }
-    </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./index.js"></script>
-    <title>Accordion,Banner task</title>
+    <title>Accordion, Banner Task</title>
   </head>
   <body class="bg-red-100 min-h-screen flex flex-col items-center justify-center">
-    <div id="navbar" class="flex justify-between items-center bg-red-200 p-4 rounded-md shadow-lg w-full max-w-xl mb-6">
+    <!-- Navbar -->
+    <div id="navbar" class="flex justify-between items-center bg-red-200 p-4 rounded-md shadow-lg w-full max-w-xl mb-6 z-50">
       <nav class="w-full underline-offset-8 flex items-center justify-between font-bold">
-        <a href="#" class="transition-all hover:underline-offset-0 nav-elements">Home</a>
+        <a href="#" class="transition-all hover:underline-offset-0 nav-elements hover:text-white">Home</a>
         <div id="nav-item-container" class="relative">
-          <a href="#" class="nav-elements">Category</a>
-          <div class="details absolute flex flex-col bg-red-100 bg-gray-300 rounded-md underline-offset-8 gap-y-5 gap-x-3 text-left px-4 py-5 hidden">
-            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl ">Lorem</h2>
-            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl ">Lorem</h2>
-            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl ">Lorem</h2>
+          <a href="#categories" class="nav-elements transition-all hover:text-white">Category</a>
+          <div class="details absolute flex flex-col bg-red-200 rounded-md underline-offset-8 gap-y-5 text-left px-4 py-5 hidden z-40">
+            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl">Lorem</h2>
+            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl">Lorem</h2>
+            <h2 class="underline-offset-8 px-5 py-1 transition-all rounded-md hover:shadow-xl">Lorem</h2>
           </div>
         </div>
-        <a href="#" class="nav-elements">Login</a>
+        <a href="#faqs" class="transition-all hover:text-white">FAQs</a>
+        <a href="#login" class="nav-elements transition-all hover:text-white">Login</a>
       </nav>
     </div>
-    <div id="banner" class="flex w-full h-[28rem] justify-between items-center bg-cover bg-center" style="
-    background-size: cover;background-position: center;
-    transition: all 0.5s ease-in-out;">
+
+    <!-- Banner -->
+    <div id="banner" class="flex w-full h-[28rem] justify-between items-center bg-cover bg-center relative z-30" style="background-image: url('./media/suleymaniye-mosque.jpg'); transition: all 0.5s ease-in-out;">
       <button class="text-4xl px-4 bg-white opacity-25 transition-all hover:opacity-50 rounded-md" id="prev">
         &lt;
       </button>
-      <div id="dotsconteiner" class="bg-gray-300 border-4 border-white flex text-center absolute bottom-9.4">
-      </div>
+      <div id="dotscontainer" class="bg-gray-300 border-4 border-white flex text-center absolute bottom-9"></div>
       <button id="next" class="text-4xl px-4 bg-white opacity-25 transition-all hover:opacity-50 rounded-md">
         &gt;
       </button>
     </div>
-    <!-- adding faqs section -->
-    <div class="my-3 bg-white rounded-md shadow-lg w-full max-w-xl p-4 space-y-2">
-    
-      <!-- FAQ Item 1 -->
-      <h2  class="label font-bold cursor-pointer text-lg bg-red-300 p-3 rounded">
-        What is jQuery?
-      </h2>
-      <div class="answer text-gray-700 text-left p-3 hidden">
-        jQuery is a fast, small, and feature-rich JavaScript library that simplifies HTML DOM manipulation and event handling.
+
+    <!-- Cards Container -->
+    <div class="grid grid-cols-2 gap-4 items-center my-4 justify-center relative z-20">
+      <h3 class="text-4xl font-bold text-center col-span-2" id="categories">Category</h3>
+      <div class="card bg-white p-4 rounded-tr-4xl h-[400px] rounded-bl-4xl border-6 border-red-600 transition-all hover:bg-red-600 hover:text-white hover:border-white hover:ease-in-out hover:duration-1000 hover:shadow-xl hover:scale-105 shadow-lg w-[300px] max-w-xl m-4 flex flex-col items-center justify-center">
+        <h2 class="text-4xl font-bold">Lorem</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aliquid cum? Odio dignissimos, molestiae deserunt enim ipsa fuga? Optio temporibus cupid.</p>
       </div>
-  
-      <!-- FAQ Item 2 -->
-      <h2 class="label font-bold cursor-pointer text-lg bg-red-300 p-3 rounded">
-        Why use an accordion?
-      </h2>
-      <div class="answer text-gray-700 text-left p-3 hidden">
-        Accordions help organize content in a collapsible format, saving space and improving UX.
+      <div class="card bg-white p-4 rounded-tl-4xl h-[400px] rounded-br-4xl border-6 border-red-600 transition-all hover:bg-red-600 hover:text-white hover:border-white hover:ease-in-out hover:duration-1000 hover:shadow-xl hover:scale-105 shadow-lg w-[300px] max-w-xl m-4 flex flex-col items-center justify-center">
+        <h2 class="text-4xl font-bold">Lorem</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aliquid cum? Odio dignissimos, molestiae deserunt enim ipsa fuga? Optio temporibus cupid.</p>
       </div>
-  
-      <!-- FAQ Item 3 -->
-      <h2 class="label font-bold cursor-pointer text-lg bg-red-300 p-3 rounded">
-        Can I style jQuery elements?
-      </h2>
-      <div class="answer text-gray-700 text-left p-3 hidden">
-        Yes! jQuery allows you to manipulate styles, add/remove classes, and handle animations easily.
+    </div>
+
+    <!-- FAQS Section -->
+    <div id="faqs" class="my-8 mx-3 bg-white rounded-lg shadow-lg w-full p-6 relative z-10">
+      <h3 class="text-2xl font-bold text-center mb-6 text-red-500">Frequently Asked Questions</h3>
+      <div class="faq-item border-b border-gray-300 pb-4 mb-4">
+        <h2 class="label font-bold cursor-pointer text-lg bg-red-100 p-4 rounded-md hover:bg-red-200 transition-all">
+          What is jQuery?
+        </h2>
+        <div class="answer text-gray-700 text-left p-4 hidden">
+          jQuery is a fast, small, and feature-rich JavaScript library that simplifies HTML DOM manipulation and event handling.
+        </div>
       </div>
-  
+      <div class="faq-item border-b border-gray-300 pb-4 mb-4">
+        <h2 class="label font-bold cursor-pointer text-lg bg-red-100 p-4 rounded-md hover:bg-red-200 transition-all">
+          Why use an accordion?
+        </h2>
+        <div class="answer text-gray-700 text-left p-4 hidden">
+          Accordions help organize content in a collapsible format, saving space and improving UX.
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Section -->
+    <div id="login" class="flex flex-col items-center justify-center bg-red-300 rounded-lg shadow-lg max-w-prose p-6 relative z-10">
+      <legend class="text-3xl font-semibold">Login Form</legend>
+      <form id="signup_form">
+        <div class="flex flex-col mt-4 px-10 py-3 rounded-xl">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="namerr" class="text-red-600"></span>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="usrnamerr" class="text-red-600"></span>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="emlerr" class="text-red-600"></span>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="pswderr" class="animate animate-pulse text-red-600"></span>
+          <label for="retype">Retype Password</label>
+          <input type="password" id="repassword" name="repassword" class="border bg-white border-gray-300 rounded p-2" required />
+          <span id="repswderr" class="animate animate-pulse text-red-600"></span>
+          <div class="flex justify-between py-3 items-center text-center">
+            <label for="showpass">Show</label>
+            <input type="checkbox" id="showpass" value="show" />
+          </div>
+          <div class="flex justify-between">
+            <button id="cancel" class="bg-gray-100 px-2 py-3 rounded-xl transition-all hover:bg-gray-400 hover:text-white">Cancel</button>
+            <input type="submit" value="Submit" class="bg-blue-500 px-2 py-3 rounded-xl transition-all hover:bg-blue-700 hover:text-white">
+          </div>
+        </div>
+      </form>
     </div>
   </body>
 </html>

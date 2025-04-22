@@ -5,7 +5,18 @@ $(document).ready(() => {
         "./media/Landscape_01 - Without Billing.png",
         "./media/pxfuel (1).png"
     ] 
-    
+    $("a[href^='#']").click(function (event) {
+      event.preventDefault();
+      const target = $($(this).attr("href")); 
+      if (target.length) {
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top,
+          },
+          800
+        );
+      }
+    });
 let i = 0;
             banner.css("background-image", `url("${imageurls[i]}")`);
 

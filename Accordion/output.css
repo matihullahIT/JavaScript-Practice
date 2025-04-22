@@ -32,3 +32,6 @@
 .text-left {
   text-align: left;
 }
+html {
+  scroll-behavior: smooth;
+}

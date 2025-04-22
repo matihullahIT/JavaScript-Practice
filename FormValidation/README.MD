@@ -10,7 +10,7 @@ This project demonstrates a simple form validation implementation using vanilla 
 
 ## Preview
 
-![Banner](./Untitled_video_Made_with_Clipchamp.gif)
+![Banner](./Untitled%20video%20-%20Made%20with%20Clipchamp.gif)
 
 ## How to Use
 

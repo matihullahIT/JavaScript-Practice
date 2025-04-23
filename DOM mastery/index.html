@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
+    <title>DOM Mastery</title>
+  </head>
+  <body class="bg-red-100 min-h-screen flex  flex-col items-center justify-center">
+    <div>
+      <div id="container"></div>
+      <button id="delete" style="display: none;">Delete</button>
+    </div>
+    <div>  
+      <input type="text" name="heading" id="heading" class="border border-gray-300 rounded p-2 mb-4" placeholder="Enter heading" />
+      <button id="add_heading" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        add heading 
+      </button>
+    </div> 
+    <div class="flex justify-between">
+      <textarea name="details_textarea" id="details" class="border border-gray-300 rounded p-2 mb-4" placeholder="Enter details"></textarea>
+      <button id="add_details" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        add Details
+      </button>
+    </div>
+
+  </body>
+</html>

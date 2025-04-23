@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
+    <title>TODO list task</title>
+  </head>
+  <body class="bg-red-100 min-h-screen flex  flex-col items-center justify-center">
+    <div id="todolist-container">
+      <form id="taskform" class="flex flex-col gap-y-3">
+        <label name="task"></label>
+        <input type="text"name="task" id="task" class="px-2 py-3 border-1 rounded-xl" placeholder="Enter tasks">
+        <input type="text"name="status" id="status" class="px-2 py-3 border-1 rounded-xl" placeholder="Enter status">
+        <input type="submit" value="Add Task" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
+      </form>
+      <button id="clear" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">clear data</button>
+       <div id="tasks">
+      </div>
+    </div> 
+  </body>
+</html>

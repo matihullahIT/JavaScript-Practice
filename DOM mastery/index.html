@@ -1,30 +1,52 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./index.js"></script>
-    <title>DOM Mastery</title>
-  </head>
-  <body class="bg-red-100 min-h-screen flex  flex-col items-center justify-center">
-    <div>
-      <div id="container"></div>
-      <button id="delete" style="display: none;">Delete</button>
-    </div>
-    <div>  
-      <input type="text" name="heading" id="heading" class="border border-gray-300 rounded p-2 mb-4" placeholder="Enter heading" />
-      <button id="add_heading" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-        add heading 
-      </button>
-    </div> 
-    <div class="flex justify-between">
-      <textarea name="details_textarea" id="details" class="border border-gray-300 rounded p-2 mb-4" placeholder="Enter details"></textarea>
-      <button id="add_details" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-        add Details
-      </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag and Drop Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10 bg-gray-100">
+
+  <div class="flex gap-8">
+    <!-- Container 1 -->
+    <div id="container1" class="grid grid-cols-4 gap-2 w-[20rem] h-[10rem] border-4 border-black rounded-md p-2">
+      <div id="box1" draggable="true" class="bg-green-400 border-2 border-black rounded-md w-full h-full"></div>
+      <div id="box2" draggable="true" class="bg-green-400 border-2 border-black rounded-md w-full h-full"></div>
+      <div id="box3" draggable="true" class="bg-green-400 border-2 border-black rounded-md w-full h-full"></div>
+      <div id="box4" draggable="true" class="bg-green-400 border-2 border-black rounded-md w-full h-full"></div>
     </div>
 
-  </body>
+    <!-- Container 2 -->
+    <div id="container2" class="grid grid-cols-4 gap-2 w-[20rem] h-[10rem] border-4 border-dashed border-gray-400 rounded-md p-2"></div>
+  </div>
+
+  <script>
+    // Add dragstart to all boxes
+    const containers = document.querySelectorAll('#container1, #container2');
+    const boxes = document.querySelectorAll('[draggable="true"]');
+    boxes.forEach(box => {
+      box.addEventListener('dragstart', (e) => {
+        console.log("dragable")
+        e.dataTransfer.setData('text/plain', e.target.id);
+      });
+    });
+    containers.forEach(container=>{
+      container.addEventListener("dragover",(e)=>{
+        e.preventDefault()
+        console.log("dragover")
+        
+      })
+      container.addEventListener("drop",(e)=>{
+        e.preventDefault()
+        const id = e.dataTransfer.getData('text/plain')
+        console.log("id",id)
+        const box = document.getElementById(id)
+        container.appendChild(box);
+      })
+    })
+
+  </script>
+
+</body>
 </html>

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+    
+}
+html {
+  scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.card{
+    transition: all 1s ease-in-out;
+}
+.card:hover{
+  animation: fade-in 0.5s ease-in-out;
+}
+
+#testmonial{
+    animation: slide-in 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    transition: background 0.5s ease-in-out;
+}
+
+#banner{
+    animation: fade-in 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    transition: background 0.5s ease-in-out;
+}

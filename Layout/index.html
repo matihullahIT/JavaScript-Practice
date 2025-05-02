@@ -34,14 +34,32 @@
         }
       }
     </style>
-
-<title>Test Layout</title>
-  </head>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+          screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+          }
+        }
+      }
+    </script>
+    <link rel="./media/abstract-triangles-background.webp" href="favicon.ico" type="image/x-icon">
+<title>NightWave | Project Site</title>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+</head>
 
   <body class="bg-[#121212] text-white min-h-screen min-w-lg flex flex-col items-center
   scroll-smooth
   justify-between">
-    <nav id="navbar" class="rounded-3xl backdrop-blur bg-blur-lg sticky w-1/2 flex justify-between items-center p-4 transition-all">
+    <nav id="navbar" class="rounded-3xl backdrop-blur bg-blur-lg  w-1/2 lg:flex justify-between items-center p-4 transition-all md:hidden sm:hidden">
       <a href="#" class="relative transition-all after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all hover:after:w-full">Home</a>
       <a href="#catalogue" class="relative transition-all after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all hover:after:w-full">Catalogue</a>
       <a href="#testimonials_container" class="relative transition-all after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all hover:after:w-full">Testimonials</a>
@@ -50,41 +68,66 @@
     <div id="banner" class="flex w-full h-[28rem] justify-between items-center bg-cover bg-center
     bg-blur-md backdrop-blur
     relative z-30" 
-    style="transition: background 0.5s ease-in-out;">
+    style="transition: background 4s ease-in-out;">
       <div id="dotscontainer" class="relative w-full text-center  text-white text-2xl font-bold  ">
         <h1 class="text-6xl " style="animation: slide-in 0.5s ease-in-out;">Welcome to NightWave</h1>
         <p style="animation: slide-in 0.5s ease-in-out;">Experience the Future of Design</p>
-        <button style="animation: slide-in 0.5s ease-in-out;" class="text-white border-2 border-white rounded-full px-2 transition-all hover:bg-white hover:text-black ">Get Started</button>
+        <button style="animation: slide-in 0.5s ease-in-out;" class="mt-6 text-white border-2 border-white rounded-full px-2 transition-all hover:bg-white hover:text-black ">Get Started</button>
       </div>
     </div>
     <!-- <legend id="catalogue">Catalogue</legend> -->
-    <div id="catalogue" class="flex flex-wrap justify-between items-center w-full mt-20 px-5">
+    <div id="catalogue" class="flex flex-wrap justify-center items-center w-full mt-20 px-5 gap-4">
       <!-- card no1 -->
-      <div class="card flex flex-col items-center justify-center  h-60 w-1/4 bg-[#1E1E1E] rounded-3xl m-2 px-6 py-6
+      <div class="card flex flex-col items-center justify-center h-60 w-full sm:w-1/2 lg:w-1/4 bg-[#1E1E1E] rounded-3xl m-2 px-6 py-6
       hover:bg-white hover:text-black hover:border-2 hover:border-black transition-all ease-in-out
       ">
         <i class="fas fa-bolt fa-2x border-2 border-white p-4 rounded-full"></i>
       </div>
       <!-- card no2 -->
-      <div class="card flex flex-col items-center justify-center  h-60 w-1/4 bg-[#1E1E1E] rounded-3xl m-2 px-6 py-6
+      <div class="card flex flex-col items-center justify-center h-60 w-full sm:w-1/2 lg:w-1/4 bg-[#1E1E1E] rounded-3xl m-2 px-6 py-6
       hover:bg-white hover:text-black hover:border-2 hover:border-black transition-all ease-in-out
       ">
         <i class="fas fa-mobile-alt fa-2x border-2 border-white p-4 rounded-full"></i>
       </div>
       <!-- card no3 -->
-      <div class="card flex flex-col items-center justify-center  h-60 w-1/4 bg-[#1E1E1E] rounded-3xl m-2 px-6 py-6
+      <div class="card flex flex-col items-center justify-center h-60 w-full sm:w-1/2 lg:w-1/4 bg-[#1E1E1E] rounded-3xl m-2 px-6 py-6
       hover:bg-white hover:text-black hover:border-2 hover:border-black transition-all ease-in-out
       ">
         <i class="fas fa-rocket fa-2x border-2 border-white p-4 rounded-full"></i>
       </div>
     </div>
-    <div id="testimonials_container" class="mt-20 w-full flex flex-col items-center
-    py-5 px-5
-    justify-center h-auto" >
-      <legend class="text-2xl italic">Testimonials</legend>
-      <div id="testimonials" class="flex flex-col items-center justify-between w-full h-60 bg-[#1E1E1E] rounded-3xl  px-6 py-6" >
+    <legend class="text-2xl italic my-9">Testimonials</legend>
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper mt-20 px-5">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide px-4 min-w-[300px] max-w-[350px] flex flex-col items-center justify-between h-64 bg-[#1E1E1E] rounded-3xl px-6 py-6 text-center scale-90 transition-transform duration-300">
+          <i class="fas fa-user border-2 border-white rounded-full px-5 py-5 text-white text-xl my-5"></i>
+          <h3 class="text-white text-xl font-semibold mb-2">NightWave transformed our online presence — it's stunning!</h3>
+          <p class="italic text-white text-base">Alex R., Startup Founder</p>
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="swiper-slide min-w-[300px] max-w-[350px] flex flex-col items-center justify-between h-64 bg-[#1E1E1E] rounded-3xl px-6 py-6 text-center scale-90 transition-transform duration-300">
+          <i class="fas fa-user border-2 border-white rounded-full p-5 text-white text-xl mb-3"></i>
+          <h3 class="text-white text-xl font-semibold mb-2">Amazing performance and design. Highly recommend it!</h3>
+          <p class="italic text-white text-base">Jordan K., Web Developer</p>
+        </div>
+    
+        <!-- Slide 3 -->
+        <div class="swiper-slide min-w-[300px] max-w-[350px] flex flex-col items-center justify-between h-64 bg-[#1E1E1E] rounded-3xl px-6 py-6 text-center scale-90 transition-transform duration-300">
+          <i class="fas fa-user border-2 border-white rounded-full p-5 text-white text-xl mb-3"></i>
+          <h3 class="text-white text-xl font-semibold mb-2">Exceptional service and attention to detail!</h3>
+          <p class="italic text-white text-base">Maria L., Designer</p>
+        </div>
       </div>
+    
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination mt-4"></div>
     </div>
+    
+
+    
     <div id="singup" class="flex flex-col py-4 items-center justify-center">
       <form class="py-6 flex flex-col  justify-between items-center w-full h-auto bg-[#1E1E1E] rounded-3xl  px-6 py-6" action="">
         <legend class="text-sm italic">Stay in Touch</legend>
@@ -101,4 +144,29 @@
       </form>
     </div>
   </body>
+  <script>
+    
+    var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  loop: true, // Needed for infinite autoplay
+  centeredSlides: true,
+  slidesPerView: "auto",
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+  </script>
 </html>
